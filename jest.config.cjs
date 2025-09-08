@@ -4,4 +4,11 @@ module.exports = {
   roots: ['src/'],
   setupFilesAfterEnv: ['./jest.setup.after.js', 'jest-extended/all'],
   setupFiles: ['./jest.setup.js'],
+  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.tsx?$': 'babel-jest',
+  },
+  testEnvironmentOptions: {
+    url: 'http://localhost/',
+  },
 };
