@@ -10,13 +10,13 @@
     "react-fast-compare": "^2.0.4",
     "resize-observer-polyfill": "1.5.0"
   },
-  "homepage": "https://github.com/pierpo/react-archer",
+  "homepage": "https://github.com/Gitii/react-archer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierpo/react-archer"
+    "url": "https://github.com/Gitii/react-archer"
   },
   "bugs": {
-    "url": "https://github.com/pierpo/react-archer/issues"
+    "url": "https://github.com/Gitii/react-archer/issues"
   },
   "scripts": {
     "build": "NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.prod.config.js",
