@@ -8,19 +8,14 @@
 
 ## Installation
 
-`npm install react-archer --save` or `yarn add react-archer`
-
-## React-Archer AI Bot
-[React-Archer](https://codeparrot.ai/oracle?owner=Gitii&repo=react-archer) Bot will help you understand this repository better. You can ask for code examples, installation guide, debugging help and much more.
+`npm install @gitii/react-archer --save` or `yarn add @gitii/react-archer`
 
 ## Example
-
-[Try it out!](https://Gitii.github.io/react-archer/)
 
 ![Example](https://raw.githubusercontent.com/Gitii/react-archer/master/example.png)
 
 ```javascript
-import { ArcherContainer, ArcherElement } from 'react-archer';
+import { ArcherContainer, ArcherElement } from '@gitii/react-archer';
 
 const rootStyle = { display: 'flex', justifyContent: 'center' };
 const rowStyle = { margin: '200px 0', display: 'flex', justifyContent: 'space-between' };
