@@ -1,3 +1,2 @@
-import 'regenerator-runtime/runtime';
-import 'jsdom-global/register';
-import 'window-resizeto/polyfill';
+require('regenerator-runtime/runtime');
+require('window-resizeto/polyfill');

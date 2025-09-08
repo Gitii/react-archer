@@ -1,9 +1,14 @@
 {
-  "compilerOptions": {
-    "skipLibCheck": true,
-    "types": ["node", "react", "jest"]
-  },
   "extends": "./tsconfig.json",
   "include": ["src/"],
-  "exclude": ["**/*.test.*"]
+  "exclude": ["**/*.test.*"],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": ["node", "react", "jest"],
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "lib",
+    "rootDir": "src"
+  }
 }

@@ -1,9 +1,19 @@
 {
   "name": "react-archer",
   "description": "Draw arrows between DOM elements in React",
+  "type": "module",
   "main": "lib/react-archer.js",
   "module": "lib/react-archer.js",
   "types": "lib/react-archer.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/react-archer.d.ts",
+      "import": "./lib/react-archer.js"
+    }
+  },
+  "files": [
+    "lib"
+  ],
   "version": "4.4.0",
   "license": "MIT",
   "dependencies": {
@@ -19,16 +29,17 @@
     "url": "https://github.com/Gitii/react-archer/issues"
   },
   "scripts": {
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.prod.config.js",
-    "deploy:example": "NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.example-app.config.js && gh-pages -d example-dist",
-    "prepare": "npm run build",
-    "start": "NODE_OPTIONS='--openssl-legacy-provider' webpack-dev-server --hot --progress --colors --config ./webpack.config.js",
+    "build": "vite build",
+    "build:lib": "vite build --config vite.config.lib.js && tsc --project tsconfig.build.json",
+    "deploy:example": "vite build --config vite.config.example.js && gh-pages -d example-dist",
+    "prepare": "npm run build:lib",
+    "start": "vite dev",
     "test:e2e": "cypress open",
     "test:e2e:update-snapshots": "rm -rf ./cypress/snapshots",
-    "test:jest": "jest ./src/",
+    "test:jest": "jest --config jest.config.cjs ./src/",
     "test:lint": "eslint --cache --ext .ts,.tsx,.js,.tsx src/ example/",
     "test:types": "tsc",
-    "test:watch": "jest ./src/ --watch",
+    "test:watch": "jest --config jest.config.cjs ./src/ --watch",
     "test": "yarn test:lint && yarn test:types && yarn test:jest"
   },
   "peerDependencies": {
@@ -55,12 +66,12 @@
     "@types/react-test-renderer": "19.1.0",
     "@typescript-eslint/eslint-plugin": "5.17.0",
     "@typescript-eslint/parser": "5.17.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "@vitejs/plugin-react-swc": "^4.0.1",
     "babel-core": "^7.0.0-bridge",
     "babel-eslint": "10.0.3",
-    "babel-jest": "27.5.1",
-    "babel-loader": "8.0.6",
+    "babel-jest": "^27.5.1",
     "cross-env": "6.0.3",
-    "css-loader": "3.2.0",
     "cypress": "10.11.0",
     "cypress-image-snapshot": "4.0.1",
     "eslint": "8.12.0",
@@ -77,23 +88,20 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unused-imports": "2.0.0",
     "gh-pages": "2.0.1",
-    "html-webpack-plugin": "3.2.0",
     "jest": "27.5.1",
     "jest-extended": "3.0.1",
-    "jsdom": "19.0.0",
+    "jsdom": "^19.0.0",
     "jsdom-global": "3.0.2",
     "prettier": "2.6.1",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "regenerator-runtime": "^0.14.1",
     "release-it": "12.4.3",
-    "style-loader": "1.0.0",
-    "terser-webpack-plugin": "^2.1.2",
-    "ts-loader": "8.4.0",
+    "ts-jest": "^29.4.1",
     "typescript": "^4.6.3",
-    "webpack": "4.41.0",
-    "webpack-cli": "3.3.9",
-    "webpack-dev-server": "3.8.2",
+    "vite": "^7.1.5",
+    "vite-plugin-dts": "^4.5.4",
     "window-resizeto": "0.0.2"
-  }
+  },
+  "packageManager": "yarn@4.9.4+sha512.7b1cb0b62abba6a537b3a2ce00811a843bea02bcf53138581a6ae5b1bf563f734872bd47de49ce32a9ca9dcaff995aa789577ffb16811da7c603dcf69e73750b"
 }
