@@ -21,13 +21,13 @@ jobs:
       run: corepack enable
 
     - name: Install dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install --immutable
 
     - name: Run tests
       run: yarn test
 
     - name: Build package
-      run: yarn build
+      run: yarn build:lib
 
     - name: Publish to npm
       run: npm publish
