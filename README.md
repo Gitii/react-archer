@@ -2,8 +2,6 @@
 
 > **🍴 Fork Notice**: This is a fork of the original [pierpo/react-archer](https://github.com/pierpo/react-archer) that provides **React 19 support** and **pure ESM module support**. All credit goes to the original author [Pierre Poupin](https://github.com/pierpo) for creating this excellent library.
 
-[![CircleCI](https://circleci.com/gh/Gitii/react-archer.svg?style=svg)](https://circleci.com/gh/Gitii/react-archer)
-
 🏹 Draw arrows between DOM elements in React 🖋
 
 ## Installation
