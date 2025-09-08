@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node", "react", "jest"]
   },
   "extends": "./tsconfig.json",
   "include": ["src/"],
