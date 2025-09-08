@@ -1,5 +1,5 @@
 {
-  "name": "react-archer",
+  "name": "@gitii/react-archer",
   "description": "Draw arrows between DOM elements in React",
   "type": "module",
   "main": "lib/react-archer.js",
