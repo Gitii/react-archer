@@ -2,14 +2,13 @@
   "name": "react-archer",
   "description": "Draw arrows between DOM elements in React",
   "type": "module",
-  "main": "lib/react-archer.umd.js",
+  "main": "lib/react-archer.js",
   "module": "lib/react-archer.js",
   "types": "lib/react-archer.d.ts",
   "exports": {
     ".": {
       "types": "./lib/react-archer.d.ts",
-      "import": "./lib/react-archer.js",
-      "require": "./lib/react-archer.umd.js"
+      "import": "./lib/react-archer.js"
     }
   },
   "files": [

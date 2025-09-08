@@ -9,18 +9,12 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/react-archer.ts'),
       name: 'ReactArcher',
-      formats: ['es', 'umd'],
-      fileName: (format) => `react-archer.${format === 'es' ? 'js' : format === 'umd' ? 'umd.js' : 'js'}`,
+      formats: ['es'],
+      fileName: () => 'react-archer.js',
     },
     outDir: 'lib',
     rollupOptions: {
       external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
     },
   },
 });
