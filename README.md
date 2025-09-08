@@ -1,6 +1,8 @@
 # react-archer
 
-[![CircleCI](https://circleci.com/gh/pierpo/react-archer.svg?style=svg)](https://circleci.com/gh/pierpo/react-archer)
+> **🍴 Fork Notice**: This is a fork of the original [pierpo/react-archer](https://github.com/pierpo/react-archer) that provides **React 19 support** and **pure ESM module support**. All credit goes to the original author [Pierre Poupin](https://github.com/pierpo) for creating this excellent library.
+
+[![CircleCI](https://circleci.com/gh/Gitii/react-archer.svg?style=svg)](https://circleci.com/gh/Gitii/react-archer)
 
 🏹 Draw arrows between DOM elements in React 🖋
 
@@ -9,13 +11,13 @@
 `npm install react-archer --save` or `yarn add react-archer`
 
 ## React-Archer AI Bot
-[React-Archer](https://codeparrot.ai/oracle?owner=pierpo&repo=react-archer) Bot will help you understand this repository better. You can ask for code examples, installation guide, debugging help and much more.
+[React-Archer](https://codeparrot.ai/oracle?owner=Gitii&repo=react-archer) Bot will help you understand this repository better. You can ask for code examples, installation guide, debugging help and much more.
 
 ## Example
 
-[Try it out!](https://pierpo.github.io/react-archer/)
+[Try it out!](https://Gitii.github.io/react-archer/)
 
-![Example](https://raw.githubusercontent.com/pierpo/react-archer/master/example.png)
+![Example](https://raw.githubusercontent.com/Gitii/react-archer/master/example.png)
 
 ```javascript
 import { ArcherContainer, ArcherElement } from 'react-archer';
@@ -118,7 +120,7 @@ This will allow you to have more control on when you want to re-draw the arrows.
 | Name | Type | Description |
 | - | - | - |
 | `id` | `string` | The id that will identify the Archer Element.
-| `children` | `React.Node \| (ArcherContext) => React.Node` | :warning: Must be a **single** element or a function of the internal context. If you are passing a custom component, it should be wrapped in a div or you should forward the reference (see [this](https://github.com/pierpo/react-archer/releases/tag/v2.0.0))
+| `children` | `React.Node \| (ArcherContext) => React.Node` | :warning: Must be a **single** element or a function of the internal context. If you are passing a custom component, it should be wrapped in a div or you should forward the reference (see [this](https://github.com/Gitii/react-archer/releases/tag/v2.0.0))
 | `relations` | `Relation[]` |
 
 The `Relation` type has the following shape:
